@@ -1,0 +1,14 @@
+df3['bhk']=df3['size'].apply(lambda x: int(x.split(' ')[0]))
+
+this will split size values , that are in two types integars and strings
+. with these two values it is difficult to make predictions so this lambda with split
+fucntion will split it, [0] means first value .
+
+-------------------------------------------------------
+location is a categorial data but here we are training regression model
+that is why too much location values will create some problems .
+we will make location values less as much as we can.
+
+
+df5.location=df5.location.apply(lambda x: x.strip())
+this strip() will remove all the extra spaces from our location column
